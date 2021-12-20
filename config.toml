@@ -1,4 +1,4 @@
-baseURL = "https://s-beats.github.io/s-beats.github.io/"
+baseURL = "https://s-beats.github.io/"
 languageCode = "ja-jp"
 title = "beats blog"
 theme = "hugo-tania"
