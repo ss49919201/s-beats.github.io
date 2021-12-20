@@ -1,1 +1,1 @@
-Here is a example blog!
+This is memorandum😷
