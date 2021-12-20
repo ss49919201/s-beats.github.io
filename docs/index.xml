@@ -1,9 +1,252 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>beats blog</title>
-    <link>http://example.org/</link>
+    <link>https://s-beats.github.io/</link>
     <description>Recent content on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 18 Dec 2021 12:00:24 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>RDS復習メモ</title>
+    <link>https://s-beats.github.io/post/rds%E5%BE%A9%E7%BF%92%E3%83%A1%E3%83%A2/</link>
+    <pubDate>Sat, 18 Dec 2021 12:00:24 +0900</pubDate>
+    
+    <guid>https://s-beats.github.io/post/rds%E5%BE%A9%E7%BF%92%E3%83%A1%E3%83%A2/</guid>
+    <description>
+        &lt;p&gt;業務でRDSを使うことになったので再復習がてら雑なメモを残す。&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;
+    &lt;a href=&#34;#%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    概要
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;マネージドRDBサービスである。&lt;/li&gt;
+&lt;li&gt;バックアップ、ハードのメンテナンス、障害時の復旧など面倒見てくれる。&lt;/li&gt;
+&lt;li&gt;エンジンは複数種類用意されている。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ストレージ&#34;&gt;
+    &lt;a href=&#34;#%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    ストレージ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;保存用ストレージにはEBSを使う。
+&lt;ul&gt;
+&lt;li&gt;汎用SSD、プロビジョンドIOPS SSD、マグネティックの三種から選択する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;高いIOPSが求められる際はプロビジョンドIOPS SSDを使う。&lt;/li&gt;
+&lt;li&gt;ストレージ拡張はダウンタイムなしで可能だが、拡張中は若干パフォーマンスが落ちる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;マルチaz&#34;&gt;
+    &lt;a href=&#34;#%e3%83%9e%e3%83%ab%e3%83%81az&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    マルチAZ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;二つのAZにDBインスタンスを配置可能である。&lt;/li&gt;
+&lt;li&gt;障害発生時やメンテナンスのダウンタイムを短縮して高い可用性を保てる。&lt;/li&gt;
+&lt;li&gt;片方のAZにはマスターDBインスタンス、もう片方にはスタンバイDBインスタンスが配置される。&lt;/li&gt;
+&lt;li&gt;マスターとスタンバイの同期レプリケーション(リアルタイムでの複製作成)により冗長化される。&lt;/li&gt;
+&lt;li&gt;マスターへの更新時に、同期レプリケーションが実行されて更新完了となる。&lt;/li&gt;
+&lt;li&gt;若干の遅延はあるが、数ms程度である。&lt;/li&gt;
+&lt;li&gt;フェイルオーバーが発生した際は、RDSのFQDNのDNSレコードがスタンバイ側IPに差し向けられる。
+&lt;ul&gt;
+&lt;li&gt;アプリケーション側でIPのキャッシュを持っている場合は、一時的に接続できなくなる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;リードレプリカ&#34;&gt;
+    &lt;a href=&#34;#%e3%83%aa%e3%83%bc%e3%83%89%e3%83%ac%e3%83%97%e3%83%aa%e3%82%ab&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    リードレプリカ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;参照専用のDBインスタンスである。&lt;/li&gt;
+&lt;li&gt;マスターのメンテナンス時も、参照は止めないという運用が可能となる。&lt;/li&gt;
+&lt;li&gt;マスターへの負荷を抑えられる。&lt;/li&gt;
+&lt;li&gt;マスターとのデータ同期は非同期レプリケーション方式で実行される。&lt;/li&gt;
+&lt;li&gt;書き込み時にパフォーマンスへの影響はないが、反映まで若干のタイムラグがある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;バックアップ&#34;&gt;
+    &lt;a href=&#34;#%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    バックアップ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;自動バックアップ可能である。
+&lt;ul&gt;
+&lt;li&gt;1日1回自動でDBスナップショットを取得する。&lt;/li&gt;
+&lt;li&gt;保持期間は最大35日である。&lt;/li&gt;
+&lt;li&gt;スナップショットを選択して新しいDB作成可能である。&lt;/li&gt;
+&lt;li&gt;稼働中のインスタンスにバックアップデータを置き換えることはできない。(新しく作るしかない)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;手動スナップショットも可能である。
+&lt;ul&gt;
+&lt;li&gt;1リージョンあたり100個までという制限がある。&lt;/li&gt;
+&lt;li&gt;シングルAZの場合、短時間のI/O中断時間がある。(自動バックアップも)&lt;/li&gt;
+&lt;li&gt;マルチAZの場合は、スタンバイからスナップショットを取るのでマスターへの影響はない。(I/Oのダウンタイムはない)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;リストア&#34;&gt;
+    &lt;a href=&#34;#%e3%83%aa%e3%82%b9%e3%83%88%e3%82%a2&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    リストア
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;スナップショットを選んで新しいインスタンスを作成する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ポイントタイムリカバリー&#34;&gt;
+    &lt;a href=&#34;#%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%aa%e3%82%ab%e3%83%90%e3%83%aa%e3%83%bc&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    ポイントタイムリカバリー
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;直近5分前から最大35日前までの任意のタイミングの状態のDBインスタンスを作成可能である。&lt;/li&gt;
+&lt;li&gt;最大日数は自動バックアップの期間に準ずる。
+&lt;ul&gt;
+&lt;li&gt;自動バックアップ有効の場合のみポイントタイムリカバリ可能である。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ネットワーク&#34;&gt;
+    &lt;a href=&#34;#%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    ネットワーク
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VPC内に配置可能で、インターネット非公開にできる。&lt;/li&gt;
+&lt;li&gt;ほかのサービスからの通信はエンジンが提供するSSLを使った暗号化で守られる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;暗号化&#34;&gt;
+    &lt;a href=&#34;#%e6%9a%97%e5%8f%b7%e5%8c%96&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    暗号化
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;暗号化有効にすることで、ストレージ 、スナップショット、ログなどを暗号化して保存できる。&lt;/li&gt;
+&lt;li&gt;途中から有効にすることはできない。&lt;/li&gt;
+&lt;li&gt;スナップショット暗号化コピーを作って、そのコピーからDBインスタンスを作成することで既存のデータを暗号化できる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;aurora&#34;&gt;
+    &lt;a href=&#34;#aurora&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Aurora
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS独自のエンジンで、ハイパフォーマンスである。&lt;/li&gt;
+&lt;li&gt;MySQL互換のエディション、PostgreSQL互換のエディションがある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;構成&#34;&gt;
+    &lt;a href=&#34;#%e6%a7%8b%e6%88%90&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    構成
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;インスタンスを作成すると、Auroraクラスタが作成される。&lt;/li&gt;
+&lt;li&gt;クラスタは、DBインスタンス、クラスタボリューム(ストレージ)で構成される。&lt;/li&gt;
+&lt;li&gt;ボリュームはSSDベースである。&lt;/li&gt;
+&lt;li&gt;クラスタボリュームは、単一リージョン内の3つのAZにあるそれぞれ2つのコピーで構成される。
+&lt;ul&gt;
+&lt;li&gt;自動で同期される。&lt;/li&gt;
+&lt;li&gt;自動で64TBまで拡張される。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;レプリカ&#34;&gt;
+    &lt;a href=&#34;#%e3%83%ac%e3%83%97%e3%83%aa%e3%82%ab&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    レプリカ
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;マスタのマルチAZ構成はない。&lt;/li&gt;
+&lt;li&gt;クラスタ内のリードレプリカが、プライマリインスタンスに昇格することでフェイルオーバーを実現する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;エンドポイント&#34;&gt;
+    &lt;a href=&#34;#%e3%82%a8%e3%83%b3%e3%83%89%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    エンドポイント
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;プライマリインスタンスへのエンドポイントはクラスタエンドポイントとなる。&lt;/li&gt;
+&lt;li&gt;リードレプリカへのエンドポイントは読み取りエンドポイントとなる。
+&lt;ul&gt;
+&lt;li&gt;複数のレプリカインスタンスがある場合は自動で負荷分散される。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;インスタンスごとのエンドポイントはインスタンスエンドポイントとなる。&lt;/li&gt;
+&lt;li&gt;インスタンスエンドポイントをグルーピングして、カスタムエンドポイントを作成することも可能である。&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
   </channel>
 </rss>

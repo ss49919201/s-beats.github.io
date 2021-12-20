@@ -3,6 +3,7 @@ languageCode = "ja-jp"
 title = "beats blog"
 theme = "hugo-tania"
 paginate = 6
+publishDir = "docs"
 
 disqusShortname = "https-hugo-tania-netlify-app"
 
