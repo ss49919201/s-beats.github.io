@@ -2,5 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
+comments: false
+adsense: false
 ---
 
