@@ -6,7 +6,19 @@
     <description>Recent content in Posts on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 02 Jan 2022 08:42:04 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jan 2022 08:14:10 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NOTICE</title>
+      <link>https://s-beats.github.io/post/notice/</link>
+      <pubDate>Mon, 03 Jan 2022 08:14:10 +0900</pubDate>
+      
+      <guid>https://s-beats.github.io/post/notice/</guid>
+      <description>   NOTICEとは  サイバー攻撃に利用されるおそれのあるIoT機器の調査をして、 該当する機器の利用者へ注意喚起を行う取り組みを指す。
+総務省、国立研究開発法人情報通信機構（NICT）及びISPが連携して、実施される。
+   取り組みフロー  実施される取り組みの大まかなフローは以下である。
+ NICTがIoT機器（ルータ、ウェブカメラ等）に、容易に推測されるパスワードを入力して調査 調査結果をISPに情報提供 ISPから利用者に注意喚起（メール、郵送等） 利用者がNOTICEサポートセンター（総務省が設置）に問い合わせユーザサポートを受けて、設定の変更等の適切な対策を実施（パスワード設定、ファームウェア更新等）     まとめ   NICTが攻撃に利用されるIoT機器の調査し、ISPを通じて注意喚起 利用者がユーザサポートに問い合わせ、設定を変更     参考   https://notice.go.jp/  </description>
+    </item>
+    
     <item>
       <title>二要素認証と二段階認証</title>
       <link>https://s-beats.github.io/post/%E4%BA%8C%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC%E3%81%A8%E4%BA%8C%E6%AE%B5%E9%9A%8E%E8%AA%8D%E8%A8%BC/</link>

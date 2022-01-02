@@ -5,7 +5,75 @@
     <description>Recent content on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 02 Jan 2022 08:42:04 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jan 2022 08:14:10 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>NOTICE</title>
+    <link>https://s-beats.github.io/post/notice/</link>
+    <pubDate>Mon, 03 Jan 2022 08:14:10 +0900</pubDate>
+    
+    <guid>https://s-beats.github.io/post/notice/</guid>
+    <description>
+        &lt;h2 id=&#34;noticeとは&#34;&gt;
+    &lt;a href=&#34;#notice%e3%81%a8%e3%81%af&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    NOTICEとは
+&lt;/h2&gt;
+&lt;p&gt;サイバー攻撃に利用されるおそれのあるIoT機器の調査をして、
+該当する機器の利用者へ注意喚起を行う取り組みを指す。&lt;/p&gt;
+&lt;p&gt;総務省、国立研究開発法人情報通信機構（NICT）及びISPが連携して、実施される。&lt;/p&gt;
+&lt;h2 id=&#34;取り組みフロー&#34;&gt;
+    &lt;a href=&#34;#%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf%e3%83%95%e3%83%ad%e3%83%bc&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    取り組みフロー
+&lt;/h2&gt;
+&lt;p&gt;実施される取り組みの大まかなフローは以下である。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;NICTがIoT機器（ルータ、ウェブカメラ等）に、容易に推測されるパスワードを入力して調査&lt;/li&gt;
+&lt;li&gt;調査結果をISPに情報提供&lt;/li&gt;
+&lt;li&gt;ISPから利用者に注意喚起（メール、郵送等）&lt;/li&gt;
+&lt;li&gt;利用者がNOTICEサポートセンター（総務省が設置）に問い合わせユーザサポートを受けて、設定の変更等の適切な対策を実施（パスワード設定、ファームウェア更新等）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;
+    &lt;a href=&#34;#%e3%81%be%e3%81%a8%e3%82%81&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    まとめ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NICTが攻撃に利用されるIoT機器の調査し、ISPを通じて注意喚起&lt;/li&gt;
+&lt;li&gt;利用者がユーザサポートに問い合わせ、設定を変更&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;
+    &lt;a href=&#34;#%e5%8f%82%e8%80%83&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    参考
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://notice.go.jp/&#34;&gt;https://notice.go.jp/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>二要素認証と二段階認証</title>
     <link>https://s-beats.github.io/post/%E4%BA%8C%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC%E3%81%A8%E4%BA%8C%E6%AE%B5%E9%9A%8E%E8%AA%8D%E8%A8%BC/</link>
