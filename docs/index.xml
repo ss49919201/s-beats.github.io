@@ -5,7 +5,57 @@
     <description>Recent content on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 18 Dec 2021 12:00:24 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 08:42:04 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>二要素認証と二段階認証</title>
+    <link>https://s-beats.github.io/post/%E4%BA%8C%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC%E3%81%A8%E4%BA%8C%E6%AE%B5%E9%9A%8E%E8%AA%8D%E8%A8%BC/</link>
+    <pubDate>Sun, 02 Jan 2022 08:42:04 +0900</pubDate>
+    
+    <guid>https://s-beats.github.io/post/%E4%BA%8C%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC%E3%81%A8%E4%BA%8C%E6%AE%B5%E9%9A%8E%E8%AA%8D%E8%A8%BC/</guid>
+    <description>
+        &lt;p&gt;ごっちゃにして解釈されがちだし、自分もしていたのでまとめる。&lt;/p&gt;
+&lt;h2 id=&#34;二要素認証とは&#34;&gt;
+    &lt;a href=&#34;#%e4%ba%8c%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc%e3%81%a8%e3%81%af&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    二要素認証とは
+&lt;/h2&gt;
+&lt;p&gt;認証に二つの要素を使用する方式を指す。
+このとき選択する要素は、&lt;strong&gt;知識&lt;/strong&gt;、&lt;strong&gt;所有&lt;/strong&gt;、&lt;strong&gt;生体&lt;/strong&gt;の三つのうち二つである。&lt;/p&gt;
+&lt;h2 id=&#34;二段階認証&#34;&gt;
+    &lt;a href=&#34;#%e4%ba%8c%e6%ae%b5%e9%9a%8e%e8%aa%8d%e8%a8%bc&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    二段階認証
+&lt;/h2&gt;
+&lt;p&gt;認証の成立に二つの段階を要する方式を指す。&lt;/p&gt;
+&lt;h2 id=&#34;違い&#34;&gt;
+    &lt;a href=&#34;#%e9%81%95%e3%81%84&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    違い
+&lt;/h2&gt;
+&lt;p&gt;二要素認証 = 二段階認証 ではない！
+パスワード認証成立→秘密の質問認証成立→認証成立といった場合は、二段階認証ではあるが&lt;strong&gt;知識&lt;/strong&gt;要素しか用いていないため、二要素認証にはならない。
+段階が一つでも、一度に二つの要素の認証を行う場合は、二要素認証となる。&lt;/p&gt;
+&lt;p&gt;認証時の段階の数を示すのが&lt;strong&gt;○段階認証&lt;/strong&gt;であり、
+認証に用いる要素数を示すのが&lt;strong&gt;○要素認証&lt;/strong&gt;となる。&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>RDS復習メモ</title>
     <link>https://s-beats.github.io/post/rds%E5%BE%A9%E7%BF%92%E3%83%A1%E3%83%A2/</link>

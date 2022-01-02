@@ -6,7 +6,20 @@
     <description>Recent content in Posts on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 18 Dec 2021 12:00:24 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 08:42:04 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>二要素認証と二段階認証</title>
+      <link>https://s-beats.github.io/post/%E4%BA%8C%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC%E3%81%A8%E4%BA%8C%E6%AE%B5%E9%9A%8E%E8%AA%8D%E8%A8%BC/</link>
+      <pubDate>Sun, 02 Jan 2022 08:42:04 +0900</pubDate>
+      
+      <guid>https://s-beats.github.io/post/%E4%BA%8C%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC%E3%81%A8%E4%BA%8C%E6%AE%B5%E9%9A%8E%E8%AA%8D%E8%A8%BC/</guid>
+      <description>ごっちゃにして解釈されがちだし、自分もしていたのでまとめる。
+   二要素認証とは  認証に二つの要素を使用する方式を指す。 このとき選択する要素は、知識、所有、生体の三つのうち二つである。
+   二段階認証  認証の成立に二つの段階を要する方式を指す。
+   違い  二要素認証 = 二段階認証 ではない！ パスワード認証成立→秘密の質問認証成立→認証成立といった場合は、二段階認証ではあるが知識要素しか用いていないため、二要素認証にはならない。 段階が一つでも、一度に二つの要素の認証を行う場合は、二要素認証となる。
+認証時の段階の数を示すのが○段階認証であり、 認証に用いる要素数を示すのが○要素認証となる。</description>
+    </item>
+    
     <item>
       <title>RDS復習メモ</title>
       <link>https://s-beats.github.io/post/rds%E5%BE%A9%E7%BF%92%E3%83%A1%E3%83%A2/</link>
