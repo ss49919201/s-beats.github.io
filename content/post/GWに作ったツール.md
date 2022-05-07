@@ -11,7 +11,9 @@ adsense: false
 ## idgen
 
 ダミーのUUIDとかULID欲しいなーって時にコマンド打ち込むだけで出力してくれるツールを作った。
+
 個人開発の中で結構使ってて気に入っている。
+
 いずれはVersion指定とかもできたらいいかなと思っている。
 
 https://github.com/s-beats/idgen
@@ -30,4 +32,5 @@ https://github.com/s-beats/ssmparam
 ## まとめ
 
 やっぱり開発って楽しい。
+
 最近はWEBアプリとかを作るよりも便利ツールやライブラリを作ることに喜びを感じます。

@@ -24,9 +24,9 @@
     &lt;/a&gt;
     idgen
 &lt;/h2&gt;
-&lt;p&gt;ダミーのUUIDとかULID欲しいなーって時にコマンド打ち込むだけで出力してくれるツールを作った。
-個人開発の中で結構使ってて気に入っている。
-いずれはVersion指定とかもできたらいいかなと思っている。&lt;/p&gt;
+&lt;p&gt;ダミーのUUIDとかULID欲しいなーって時にコマンド打ち込むだけで出力してくれるツールを作った。&lt;/p&gt;
+&lt;p&gt;個人開発の中で結構使ってて気に入っている。&lt;/p&gt;
+&lt;p&gt;いずれはVersion指定とかもできたらいいかなと思っている。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/s-beats/idgen&#34;&gt;https://github.com/s-beats/idgen&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ssmparam&#34;&gt;
     &lt;a href=&#34;#ssmparam&#34; class=&#34;anchor&#34;&gt;
@@ -53,8 +53,8 @@
     &lt;/a&gt;
     まとめ
 &lt;/h2&gt;
-&lt;p&gt;やっぱり開発って楽しい。
-最近はWEBアプリとかを作るよりも便利ツールやライブラリを作ることに喜びを感じます。&lt;/p&gt;
+&lt;p&gt;やっぱり開発って楽しい。&lt;/p&gt;
+&lt;p&gt;最近はWEBアプリとかを作るよりも便利ツールやライブラリを作ることに喜びを感じます。&lt;/p&gt;
 
     </description>
     </item>
