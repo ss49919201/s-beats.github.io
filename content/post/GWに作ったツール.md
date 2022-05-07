@@ -19,7 +19,9 @@ https://github.com/s-beats/idgen
 ## ssmparam
 
 https://github.com/aws/aws-sdk-go の SSM のAPIの薄いラッパーを作った。
+
 `~Input`と`~Output`の形の構造体を扱うのが面倒な時があったのがモチベーションである。
+
 ユースケースを絞りすぎている感はあるけど割と気に入っている。
 簡素な作りだけど開発自体は楽しかった。
 

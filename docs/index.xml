@@ -38,9 +38,9 @@
     &lt;/a&gt;
     ssmparam
 &lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;https://github.com/aws/aws-sdk-go&lt;/a&gt; の SSM のAPIの薄いラッパーを作った。
-&lt;code&gt;~Input&lt;/code&gt;と&lt;code&gt;~Output&lt;/code&gt;の形の構造体を扱うのが面倒な時があったのがモチベーションである。
-ユースケースを絞りすぎている感はあるけど割と気に入っている。
+&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;https://github.com/aws/aws-sdk-go&lt;/a&gt; の SSM のAPIの薄いラッパーを作った。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~Input&lt;/code&gt;と&lt;code&gt;~Output&lt;/code&gt;の形の構造体を扱うのが面倒な時があったのがモチベーションである。&lt;/p&gt;
+&lt;p&gt;ユースケースを絞りすぎている感はあるけど割と気に入っている。
 簡素な作りだけど開発自体は楽しかった。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/s-beats/ssmparam&#34;&gt;https://github.com/s-beats/ssmparam&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;
