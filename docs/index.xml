@@ -5,7 +5,60 @@
     <description>Recent content on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 10 Apr 2022 08:12:54 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 22:37:49 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>GWに作ったツール</title>
+    <link>https://s-beats.github.io/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/</link>
+    <pubDate>Sat, 07 May 2022 22:37:49 +0900</pubDate>
+    
+    <guid>https://s-beats.github.io/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/</guid>
+    <description>
+        &lt;p&gt;今回のGW期間で作ったツールを雑に列挙する。&lt;/p&gt;
+&lt;h2 id=&#34;idgen&#34;&gt;
+    &lt;a href=&#34;#idgen&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    idgen
+&lt;/h2&gt;
+&lt;p&gt;ダミーのUUIDとかULID欲しいなーって時にコマンド打ち込むだけで出力してくれるツールを作った。
+個人開発の中で結構使ってて気に入っている。
+いずれはVersion指定とかもできたらいいかなと思っている。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/s-beats/idgen&#34;&gt;https://github.com/s-beats/idgen&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ssmparam&#34;&gt;
+    &lt;a href=&#34;#ssmparam&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    ssmparam
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;https://github.com/aws/aws-sdk-go&lt;/a&gt; の SSM のAPIの薄いラッパーを作った。
+&lt;code&gt;~Input&lt;/code&gt;と&lt;code&gt;~Output&lt;/code&gt;の形の構造体を扱うのが面倒な時があったのがモチベーションである。
+ユースケースを絞りすぎている感はあるけど割と気に入っている。
+簡素な作りだけど開発自体は楽しかった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/s-beats/ssmparam&#34;&gt;https://github.com/s-beats/ssmparam&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;
+    &lt;a href=&#34;#%e3%81%be%e3%81%a8%e3%82%81&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    まとめ
+&lt;/h2&gt;
+&lt;p&gt;やっぱり開発って楽しい。
+最近はWEBアプリとかを作るよりも便利ツールやライブラリを作ることに喜びを感じます。&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>DosとDDosの違い</title>
     <link>https://s-beats.github.io/post/dos%E3%81%A8ddos%E3%81%AE%E9%81%95%E3%81%84/</link>

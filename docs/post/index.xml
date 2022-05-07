@@ -6,7 +6,21 @@
     <description>Recent content in Posts on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 10 Apr 2022 08:12:54 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 22:37:49 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GWに作ったツール</title>
+      <link>https://s-beats.github.io/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/</link>
+      <pubDate>Sat, 07 May 2022 22:37:49 +0900</pubDate>
+      
+      <guid>https://s-beats.github.io/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/</guid>
+      <description>今回のGW期間で作ったツールを雑に列挙する。
+   idgen  ダミーのUUIDとかULID欲しいなーって時にコマンド打ち込むだけで出力してくれるツールを作った。 個人開発の中で結構使ってて気に入っている。 いずれはVersion指定とかもできたらいいかなと思っている。
+https://github.com/s-beats/idgen
+   ssmparam  https://github.com/aws/aws-sdk-go の SSM のAPIの薄いラッパーを作った。 ~Inputと~Outputの形の構造体を扱うのが面倒な時があったのがモチベーションである。 ユースケースを絞りすぎている感はあるけど割と気に入っている。 簡素な作りだけど開発自体は楽しかった。
+https://github.com/s-beats/ssmparam
+   まとめ  やっぱり開発って楽しい。 最近はWEBアプリとかを作るよりも便利ツールやライブラリを作ることに喜びを感じます。</description>
+    </item>
+    
     <item>
       <title>DosとDDosの違い</title>
       <link>https://s-beats.github.io/post/dos%E3%81%A8ddos%E3%81%AE%E9%81%95%E3%81%84/</link>
