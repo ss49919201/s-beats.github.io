@@ -6,6 +6,7 @@ comments: false
 adsense: false
 ---
 
+# 公式インストーラー編
 
 まずは GHCup をインストールします。
 
@@ -108,3 +109,45 @@ Linking main ..
 $ ./main
 Hello World
 ```
+
+# Homebrew編
+
+```sh
+brew install stack
+```
+
+この時点ではghcとかは無い。
+`stack setup`を実行する。
+
+```sh
+stack setup
+```
+
+ビルドする。
+
+```sh
+$ stack ghc main.hs
+[1 of 1] Compiling Main             ( main.hs, main.o )
+Linking main ..
+```
+
+実行する。
+
+```sh
+$ ./main
+Hello World
+```
+
+hlsをインストールする。
+
+```sh
+brew install haskell-language-server
+```
+
+ghcupをインストールする。
+
+```sh
+brew install ghcup
+```
+
+https://zenn.dev/ak2ume/articles/723e20d14b1994eb6528
