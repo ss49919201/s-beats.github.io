@@ -5,7 +5,128 @@
     <description>Recent content on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 07 May 2022 22:37:49 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Sep 2022 08:32:36 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>Postman v10 が発表された</title>
+    <link>https://s-beats.github.io/post/postman-v10-%E3%81%8C%E7%99%BA%E8%A1%A8%E3%81%95%E3%82%8C%E3%81%9F/</link>
+    <pubDate>Sat, 10 Sep 2022 08:32:36 +0900</pubDate>
+    
+    <guid>https://s-beats.github.io/post/postman-v10-%E3%81%8C%E7%99%BA%E8%A1%A8%E3%81%95%E3%82%8C%E3%81%9F/</guid>
+    <description>
+        &lt;p&gt;Postman v10 のリリースが発表されました。
+&lt;a href=&#34;https://blog.postman.com/announcing-postman-v10/&#34;&gt;https://blog.postman.com/announcing-postman-v10/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;面白そうなアップデートが結構あったので、内容を簡単にまとめてみます。&lt;/p&gt;
+&lt;h2 id=&#34;postman-cli&#34;&gt;
+    &lt;a href=&#34;#postman-cli&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Postman CLI
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Postman と同じランタイムで実行される。&lt;/li&gt;
+&lt;li&gt;Newman の基盤の上に乗っている。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/&#34;&gt;https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;自動APIテストとかに使えるかも。&lt;/p&gt;
+&lt;h2 id=&#34;grpc-サポート&#34;&gt;
+    &lt;a href=&#34;#grpc-%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    gRPC サポート
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GraphQL に続き gRPC がサポートされた。&lt;/li&gt;
+&lt;li&gt;gRPC のURLをURLバーに打ち込むだけで、使えるメソッドをセットしてくれる。
+&lt;ul&gt;
+&lt;li&gt;サーバーリフレクションというらしいんだけど、サーバーに問い合わせて使えるメソッドを取得しているのかな？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.postman.com/postman-v10-and-grpc-what-you-can-do/&#34;&gt;https://blog.postman.com/postman-v10-and-grpc-what-you-can-do/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;重い腰を上げて gRPC を始める機が熟したか&amp;hellip;。&lt;/p&gt;
+&lt;h2 id=&#34;パートナーワークスペース&#34;&gt;
+    &lt;a href=&#34;#%e3%83%91%e3%83%bc%e3%83%88%e3%83%8a%e3%83%bc%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    パートナーワークスペース
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;チーム外のメンバーを招待できるようになった。&lt;/li&gt;
+&lt;li&gt;権限を絞ったり、特定のワークスペースにのみアクセスを許可するなどの制御ができる。
+&lt;ul&gt;
+&lt;li&gt;これらを管理する新しいロールができた。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.postman.com/introducing-partner-workspaces/&#34;&gt;https://blog.postman.com/introducing-partner-workspaces/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;「チームに入れるとコストが気になるけど、同じワークスペースは使ってほしい業務委託メンバーが複数人いる」みたいなケースで嬉しいかな？&lt;/p&gt;
+&lt;h2 id=&#34;api-security&#34;&gt;
+    &lt;a href=&#34;#api-security&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    API Security
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;セキュリティルールに違反してしないかをチェックできる。&lt;/li&gt;
+&lt;li&gt;定義だけじゃなくてリクエストもチェックしてくれる。&lt;/li&gt;
+&lt;li&gt;Postman が提供してくれるルールをON/OFFして設定する。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.postman.com/introducing-api-security-in-postman-v10/&#34;&gt;https://blog.postman.com/introducing-api-security-in-postman-v10/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;API 定義のレビューってミスを見逃しがちな気がするから良いかも。
+というかそもそも脆弱な定義とか全然知らないからこれを使って学んでいきたい。&lt;/p&gt;
+&lt;h2 id=&#34;api-governance&#34;&gt;
+    &lt;a href=&#34;#api-governance&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    API Governance
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;組織の API のルールに違反してしないかをチェックできる。&lt;/li&gt;
+&lt;li&gt;重大度とかも設定できる。&lt;/li&gt;
+&lt;li&gt;Postman rule library に含まれる違反の場合は影響や修正方法へのリンクを掲示してくれる。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.postman.com/api-governance-with-postman-v10/&#34;&gt;https://blog.postman.com/api-governance-with-postman-v10/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;スタイルガイドがきちんとある組織ならかなり活きそう。
+スタイルガイド作るのが大変そうだけど。&lt;/p&gt;
+&lt;h2 id=&#34;あまり理解できなかった&#34;&gt;
+    &lt;a href=&#34;#%e3%81%82%e3%81%be%e3%82%8a%e7%90%86%e8%a7%a3%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%8b%e3%81%a3%e3%81%9f&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    あまり理解できなかった
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;API Builder の改善&lt;/li&gt;
+&lt;li&gt;Private API Network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使ったことなくてイメージ付きませんでした。&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>GWに作ったツール</title>
     <link>https://s-beats.github.io/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/</link>

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>GWに作ったツール | beats blog</title>
+    <title>Postman v10 が発表された | beats blog</title>
 
     
     
     
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="GWに作ったツール | beats blog"/>
-    <meta itemprop="name" content="GWに作ったツール | beats blog" />
-    <meta name="twitter:title" content="GWに作ったツール | beats blog" />
-    <meta name="application-name" content="GWに作ったツール | beats blog" />
+    <meta property="og:title" content="Postman v10 が発表された | beats blog"/>
+    <meta itemprop="name" content="Postman v10 が発表された | beats blog" />
+    <meta name="twitter:title" content="Postman v10 が発表された | beats blog" />
+    <meta name="application-name" content="Postman v10 が発表された | beats blog" />
 
 
     <meta name="description" content="" />
@@ -27,8 +27,8 @@
 
 <meta property="og:type" content="article" />
 <meta property="article:publisher" content="" />
-<meta property="og:article:published_time" content=2022-05-07T22:37:49&#43;0900 />
-<meta property="article:published_time" content=2022-05-07T22:37:49&#43;0900 />
+<meta property="og:article:published_time" content=2022-09-10T08:32:36&#43;0900 />
+<meta property="article:published_time" content=2022-09-10T08:32:36&#43;0900 />
 
 
 
@@ -38,16 +38,16 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "GWに作ったツール",
+    "headline": "Postman v10 が発表された",
     "author": {
       "@type": "Person",
       "name": ""
     },
-    "datePublished": "2022-05-07",
+    "datePublished": "2022-09-10",
     "description": "",
-    "wordCount":  18 ,
+    "wordCount":  63 ,
     "mainEntityOfPage": "True",
-    "dateModified": "2022-05-07",
+    "dateModified": "2022-09-10",
     "publisher": {
       "@type": "Organization",
       "name": "",
@@ -116,14 +116,14 @@
         <header class="article-header">
             <div class="thumb">
                 <div>
-                    <h1>GWに作ったツール</h1>
+                    <h1>Postman v10 が発表された</h1>
                     <div class="post-meta">
                         <div>
                             
                             
                               
                             
-                            By  | <time>May 07, 2022</time>
+                            By  | <time>September 10, 2022</time>
                             | 1 minutes
                         </div>
                         <div class="tags">
@@ -136,48 +136,116 @@
     </article>
 
     <div class="article-post">
-    <p>今回のGW期間で作ったツールを雑に列挙する。</p>
-<h2 id="idgen">
-    <a href="#idgen" class="anchor">
+    <p>Postman v10 のリリースが発表されました。
+<a href="https://blog.postman.com/announcing-postman-v10/">https://blog.postman.com/announcing-postman-v10/</a></p>
+<p>面白そうなアップデートが結構あったので、内容を簡単にまとめてみます。</p>
+<h2 id="postman-cli">
+    <a href="#postman-cli" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    idgen
+    Postman CLI
 </h2>
-<p>ダミーのUUIDとかULID欲しいなーって時にコマンド打ち込むだけで出力してくれるツールを作った。</p>
-<p>個人開発の中で結構使ってて気に入っている。</p>
-<p>いずれはVersion指定とかもできたらいいかなと思っている。</p>
-<p><a href="https://github.com/s-beats/idgen">https://github.com/s-beats/idgen</a></p>
-<h2 id="ssmparam">
-    <a href="#ssmparam" class="anchor">
+<ul>
+<li>Postman と同じランタイムで実行される。</li>
+<li>Newman の基盤の上に乗っている。</li>
+<li><a href="https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/">https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/</a></li>
+</ul>
+<p>自動APIテストとかに使えるかも。</p>
+<h2 id="grpc-サポート">
+    <a href="#grpc-%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    ssmparam
+    gRPC サポート
 </h2>
-<p><a href="https://github.com/aws/aws-sdk-go">https://github.com/aws/aws-sdk-go</a> の SSM のAPIの薄いラッパーを作った。</p>
-<p><code>~Input</code>と<code>~Output</code>の形の構造体を扱うのが面倒な時があったのがモチベーションである。</p>
-<p>ユースケースを絞りすぎている感はあるけど割と気に入っている。
-簡素な作りだけど開発自体は楽しかった。</p>
-<p><a href="https://github.com/s-beats/ssmparam">https://github.com/s-beats/ssmparam</a></p>
-<h2 id="まとめ">
-    <a href="#%e3%81%be%e3%81%a8%e3%82%81" class="anchor">
+<ul>
+<li>GraphQL に続き gRPC がサポートされた。</li>
+<li>gRPC のURLをURLバーに打ち込むだけで、使えるメソッドをセットしてくれる。
+<ul>
+<li>サーバーリフレクションというらしいんだけど、サーバーに問い合わせて使えるメソッドを取得しているのかな？</li>
+</ul>
+</li>
+<li><a href="https://blog.postman.com/postman-v10-and-grpc-what-you-can-do/">https://blog.postman.com/postman-v10-and-grpc-what-you-can-do/</a></li>
+</ul>
+<p>重い腰を上げて gRPC を始める機が熟したか&hellip;。</p>
+<h2 id="パートナーワークスペース">
+    <a href="#%e3%83%91%e3%83%bc%e3%83%88%e3%83%8a%e3%83%bc%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    まとめ
+    パートナーワークスペース
 </h2>
-<p>やっぱり開発って楽しい。</p>
-<p>最近はWEBアプリとかを作るよりも便利ツールやライブラリを作ることに喜びを感じます。</p>
+<ul>
+<li>チーム外のメンバーを招待できるようになった。</li>
+<li>権限を絞ったり、特定のワークスペースにのみアクセスを許可するなどの制御ができる。
+<ul>
+<li>これらを管理する新しいロールができた。</li>
+</ul>
+</li>
+<li><a href="https://blog.postman.com/introducing-partner-workspaces/">https://blog.postman.com/introducing-partner-workspaces/</a></li>
+</ul>
+<p>「チームに入れるとコストが気になるけど、同じワークスペースは使ってほしい業務委託メンバーが複数人いる」みたいなケースで嬉しいかな？</p>
+<h2 id="api-security">
+    <a href="#api-security" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    API Security
+</h2>
+<ul>
+<li>セキュリティルールに違反してしないかをチェックできる。</li>
+<li>定義だけじゃなくてリクエストもチェックしてくれる。</li>
+<li>Postman が提供してくれるルールをON/OFFして設定する。</li>
+<li><a href="https://blog.postman.com/introducing-api-security-in-postman-v10/">https://blog.postman.com/introducing-api-security-in-postman-v10/</a></li>
+</ul>
+<p>API 定義のレビューってミスを見逃しがちな気がするから良いかも。
+というかそもそも脆弱な定義とか全然知らないからこれを使って学んでいきたい。</p>
+<h2 id="api-governance">
+    <a href="#api-governance" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    API Governance
+</h2>
+<ul>
+<li>組織の API のルールに違反してしないかをチェックできる。</li>
+<li>重大度とかも設定できる。</li>
+<li>Postman rule library に含まれる違反の場合は影響や修正方法へのリンクを掲示してくれる。</li>
+<li><a href="https://blog.postman.com/api-governance-with-postman-v10/">https://blog.postman.com/api-governance-with-postman-v10/</a></li>
+</ul>
+<p>スタイルガイドがきちんとある組織ならかなり活きそう。
+スタイルガイド作るのが大変そうだけど。</p>
+<h2 id="あまり理解できなかった">
+    <a href="#%e3%81%82%e3%81%be%e3%82%8a%e7%90%86%e8%a7%a3%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%8b%e3%81%a3%e3%81%9f" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    あまり理解できなかった
+</h2>
+<ul>
+<li>API Builder の改善</li>
+<li>Private API Network</li>
+</ul>
+<p>使ったことなくてイメージ付きませんでした。</p>
 
     </div>
 </div>
@@ -186,17 +254,12 @@
     
     <nav class="flex container suggested">
         
-        <a rel="prev" href="/post/dos%E3%81%A8ddos%E3%81%AE%E9%81%95%E3%81%84/" title="Previous post (older)">
+        <a rel="prev" href="/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/" title="Previous post (older)">
             <span>Previous</span>
-            DosとDDosの違い
+            GWに作ったツール
             </a>
         
         
-        
-        <a rel="next" href="/post/postman-v10-%E3%81%8C%E7%99%BA%E8%A1%A8%E3%81%95%E3%82%8C%E3%81%9F/" title="Next post (newer)">
-            <span>Next</span>
-            Postman v10 が発表された
-            </a> 
         
     </nav>
     

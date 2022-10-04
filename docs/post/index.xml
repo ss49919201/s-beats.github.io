@@ -6,7 +6,21 @@
     <description>Recent content in Posts on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 07 May 2022 22:37:49 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Sep 2022 08:32:36 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postman v10 が発表された</title>
+      <link>https://s-beats.github.io/post/postman-v10-%E3%81%8C%E7%99%BA%E8%A1%A8%E3%81%95%E3%82%8C%E3%81%9F/</link>
+      <pubDate>Sat, 10 Sep 2022 08:32:36 +0900</pubDate>
+      
+      <guid>https://s-beats.github.io/post/postman-v10-%E3%81%8C%E7%99%BA%E8%A1%A8%E3%81%95%E3%82%8C%E3%81%9F/</guid>
+      <description>Postman v10 のリリースが発表されました。 https://blog.postman.com/announcing-postman-v10/
+面白そうなアップデートが結構あったので、内容を簡単にまとめてみます。
+   Postman CLI   Postman と同じランタイムで実行される。 Newman の基盤の上に乗っている。 https://blog.postman.com/introducing-the-postman-cli-to-automate-your-api-testing/  自動APIテストとかに使えるかも。
+   gRPC サポート   GraphQL に続き gRPC がサポートされた。 gRPC のURLをURLバーに打ち込むだけで、使えるメソッドをセットしてくれる。  サーバーリフレクションというらしいんだけど、サーバーに問い合わせて使えるメソッドを取得しているのかな？   https://blog.postman.com/postman-v10-and-grpc-what-you-can-do/  重い腰を上げて gRPC を始める機が熟したか&amp;hellip;。
+   パートナーワークスペース   チーム外のメンバーを招待できるようになった。 権限を絞ったり、特定のワークスペースにのみアクセスを許可するなどの制御ができる。  これらを管理する新しいロールができた。   https://blog.postman.com/introducing-partner-workspaces/  「チームに入れるとコストが気になるけど、同じワークスペースは使ってほしい業務委託メンバーが複数人いる」みたいなケースで嬉しいかな？
+   API Security   セキュリティルールに違反してしないかをチェックできる。 定義だけじゃなくてリクエストもチェックしてくれる。 Postman が提供してくれるルールをON/OFFして設定する。 https://blog.postman.com/introducing-api-security-in-postman-v10/  API 定義のレビューってミスを見逃しがちな気がするから良いかも。 というかそもそも脆弱な定義とか全然知らないからこれを使って学んでいきたい。</description>
+    </item>
+    
     <item>
       <title>GWに作ったツール</title>
       <link>https://s-beats.github.io/post/gw%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%84%E3%83%BC%E3%83%AB/</link>
