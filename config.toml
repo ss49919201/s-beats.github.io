@@ -51,9 +51,9 @@ disqusShortname = "https-hugo-tania-netlify-app"
 [[menu.header]]
   name = "Articles"
   url = "/articles/"
-[[menu.footer]]
-    name = "RSS"
-    url = "/index.xml"
+# [[menu.footer]]
+#     name = "RSS"
+#     url = "/index.xml"
 
 [markup]
 [markup.highlight]
