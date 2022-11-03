@@ -1,5 +1,5 @@
 ---
-title: "Go Lingで遊んでみる"
+title: "go-linq触ってみた"
 date: 2022-11-03T13:02:46+09:00
 draft: false
 comments: false
