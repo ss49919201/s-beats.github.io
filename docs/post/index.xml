@@ -6,7 +6,24 @@
     <description>Recent content in Posts on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 10 Sep 2022 08:32:36 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Nov 2022 13:02:46 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Lingで遊んでみる</title>
+      <link>https://s-beats.github.io/post/go-ling%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B/</link>
+      <pubDate>Thu, 03 Nov 2022 13:02:46 +0900</pubDate>
+      
+      <guid>https://s-beats.github.io/post/go-ling%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B/</guid>
+      <description>go-linqというLINQ風のパッケージがあることを最近知りました。 私はGoでプログラマー人生をスタートしたこともあり、LINQが何たるかをあまり知らないのでそちらの調査ついでにちょっと触ってみようと思います。
+   LINQ とは   LINQとは、.NET Frameworkの仕様の一つで、様々な種類のデータ構造に対する操作や問い合わせなどを、プログラミング言語で書かれたプログラム中に一定の書式で直に記述することができるもの。
+  SQLに似た構文で様々な形式のデータ構造に統一的にアクセスすることができる。
+ https://e-words.jp/w/LINQ.html
+ 統合言語クエリ (LINQ) は、C# 言語への直接的なクエリ機能の統合に基づくテクノロジのセットの名前です。 これまでは、データに対するクエリは、コンパイル時の型チェックや IntelliSense のサポートがない単純な文字列として表現されてきました。 さらに、SQL データベース、XML ドキュメント、さまざまな Web サービスなど、各種データ ソースの異なるクエリ言語を学習する必要があります。
+  クエリを記述する開発者にとって、最も目立つ LINQ の &amp;ldquo;統合言語&amp;rdquo; 部分は、クエリ式です。 クエリ式は、宣言型の &amp;ldquo;クエリ構文&amp;rdquo; で記述されます。 クエリ構文を使用することで、フィルター処理、並べ替え、グループ化などのデータ ソースに対する操作を、最小限のコードで実行できます。
+ https://learn.microsoft.com/ja-jp/dotnet/csharp/linq/?redirectedfrom=MSDN
+ Language INtegrated Quuery (統合言語クエリ) .NET Frameworkが発祥 SQLライクな構文で配列などの構造化されたデータを操作可能 文字列で他のサービスに渡す前にコンパイルされるので文法ミスなどを防げる？ クエリ構文を使って、データ操作を少ないコードで表現できる  これは.NET Frameworkの話で、go-linqはメソッド構文になるはず       go-linq 使用例  README.mdを参考に簡単なプログラムを書いてみました。 2022/11/03現在、メンテが2年近く止まっているっぽいですが、LINQの雰囲気を味わうのには良いかなと思います。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  import ( &amp;#34;fmt&amp;#34; &amp;#34;github.</description>
+    </item>
+    
     <item>
       <title>Postman v10 が発表された</title>
       <link>https://s-beats.github.io/post/postman-v10-%E3%81%8C%E7%99%BA%E8%A1%A8%E3%81%95%E3%82%8C%E3%81%9F/</link>
