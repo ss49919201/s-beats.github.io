@@ -6,6 +6,7 @@ paginate = 6
 publishDir = "docs"
 
 disqusShortname = "https-hugo-tania-netlify-app"
+googleAnalytics = "G-WNS52DH70C"
 
 [params]
   # Emoji will show before the blog title on site navbar.
@@ -41,7 +42,7 @@ disqusShortname = "https-hugo-tania-netlify-app"
     twitter = ""
     twitch = ""
     whatsapp = ""
-  
+
   # Comments settigns
   [params.comments]
     enabled = true
