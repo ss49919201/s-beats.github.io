@@ -231,7 +231,7 @@ if (!doNotTrack) {
     Allow
 </h2>
 <p>即時実行可能かを返します。
-内部実装としてはは引数を固定化して<code>AllowN</code>を呼び出しています。
+内部実装としては引数を固定化して<code>AllowN</code>を呼び出しています。
 呼び出されている<code>AllowN</code>は引数を固定化して<code>reserveN</code>を呼び出し戻り値の構造体<code>Reservation</code>のbool型のフィールド<code>ok</code>の値を返します。
 即時実行可能でなければスッと諦めたいときや、別の処理に移ってそちらを終えてからリトライしたい時などに使えそうでしょうか。</p>
 <h2 id="wait">

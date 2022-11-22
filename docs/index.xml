@@ -86,7 +86,7 @@
     Allow
 &lt;/h2&gt;
 &lt;p&gt;即時実行可能かを返します。
-内部実装としてはは引数を固定化して&lt;code&gt;AllowN&lt;/code&gt;を呼び出しています。
+内部実装としては引数を固定化して&lt;code&gt;AllowN&lt;/code&gt;を呼び出しています。
 呼び出されている&lt;code&gt;AllowN&lt;/code&gt;は引数を固定化して&lt;code&gt;reserveN&lt;/code&gt;を呼び出し戻り値の構造体&lt;code&gt;Reservation&lt;/code&gt;のbool型のフィールド&lt;code&gt;ok&lt;/code&gt;の値を返します。
 即時実行可能でなければスッと諦めたいときや、別の処理に移ってそちらを終えてからリトライしたい時などに使えそうでしょうか。&lt;/p&gt;
 &lt;h2 id=&#34;wait&#34;&gt;
