@@ -148,11 +148,11 @@
     </item>
     
     <item>
-    <title>go-linq触ってみた</title>
-    <link>https://s-beats.github.io/post/go-ling%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B/</link>
+    <title>【Go】go-linq触ってみた</title>
+    <link>https://s-beats.github.io/post/go-linq%E8%A7%A6%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
     <pubDate>Thu, 03 Nov 2022 13:02:46 +0900</pubDate>
     
-    <guid>https://s-beats.github.io/post/go-ling%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B/</guid>
+    <guid>https://s-beats.github.io/post/go-linq%E8%A7%A6%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
     <description>
         &lt;p&gt;&lt;a href=&#34;https://github.com/ahmetb/go-linq&#34;&gt;go-linq&lt;/a&gt;というLINQ風のパッケージがあることを最近知りました。
 私はGoでプログラマー人生をスタートしたこともあり、LINQが何たるかをあまり知らないのでそちらの調査ついでにちょっと触ってみようと思います。&lt;/p&gt;
