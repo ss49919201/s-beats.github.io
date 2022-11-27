@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>【Go】rateパッケージの使い方 | beats blog</title>
+    <title>HDDの基礎知識 | beats blog</title>
 
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNS52DH70C"></script>
@@ -34,10 +34,10 @@ if (!doNotTrack) {
 
     
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="【Go】rateパッケージの使い方 | beats blog"/>
-    <meta itemprop="name" content="【Go】rateパッケージの使い方 | beats blog" />
-    <meta name="twitter:title" content="【Go】rateパッケージの使い方 | beats blog" />
-    <meta name="application-name" content="【Go】rateパッケージの使い方 | beats blog" />
+    <meta property="og:title" content="HDDの基礎知識 | beats blog"/>
+    <meta itemprop="name" content="HDDの基礎知識 | beats blog" />
+    <meta name="twitter:title" content="HDDの基礎知識 | beats blog" />
+    <meta name="application-name" content="HDDの基礎知識 | beats blog" />
 
 
     <meta name="description" content="" />
@@ -49,8 +49,8 @@ if (!doNotTrack) {
 
 <meta property="og:type" content="article" />
 <meta property="article:publisher" content="" />
-<meta property="og:article:published_time" content=2022-11-20T18:19:17&#43;0900 />
-<meta property="article:published_time" content=2022-11-20T18:19:17&#43;0900 />
+<meta property="og:article:published_time" content=2022-11-27T13:46:33&#43;0900 />
+<meta property="article:published_time" content=2022-11-27T13:46:33&#43;0900 />
 
 
 
@@ -60,16 +60,16 @@ if (!doNotTrack) {
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "【Go】rateパッケージの使い方",
+    "headline": "HDDの基礎知識",
     "author": {
       "@type": "Person",
       "name": ""
     },
-    "datePublished": "2022-11-20",
+    "datePublished": "2022-11-27",
     "description": "",
-    "wordCount":  109 ,
+    "wordCount":  35 ,
     "mainEntityOfPage": "True",
-    "dateModified": "2022-11-20",
+    "dateModified": "2022-11-27",
     "publisher": {
       "@type": "Organization",
       "name": "",
@@ -138,14 +138,14 @@ if (!doNotTrack) {
         <header class="article-header">
             <div class="thumb">
                 <div>
-                    <h1>【Go】rateパッケージの使い方</h1>
+                    <h1>HDDの基礎知識</h1>
                     <div class="post-meta">
                         <div>
                             
                             
                               
                             
-                            By  | <time>November 20, 2022</time>
+                            By  | <time>November 27, 2022</time>
                             | 1 minutes
                         </div>
                         <div class="tags">
@@ -158,136 +158,136 @@ if (!doNotTrack) {
     </article>
 
     <div class="article-post">
-    <p>レート制限のある処理の制御に役立つ<a href="https://pkg.go.dev/golang.org/x/time/rate">golang.org/x/time/rate</a>の存在を知りました。
-繰り返し処理の中で AWS や Stripe のAPIを使いたい時などに採用できるのではないかと思い調査しました。</p>
-<h2 id="はじめにサンプルコード">
-    <a href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab%e3%82%b3%e3%83%bc%e3%83%89" class="anchor">
+    <p>HDDの基本的な用語や構成を全然覚えられず、都度検索しているので備忘録としてまとめます。</p>
+<h2 id="プラッタ">
+    <a href="#%e3%83%97%e3%83%a9%e3%83%83%e3%82%bf" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    はじめにサンプルコード
+    プラッタ
 </h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">ctx</span> <span class="o">:=</span> <span class="nx">context</span><span class="p">.</span><span class="nf">Background</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 1秒間に0.5回(2秒間に1回)の処理を許可する
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">l</span> <span class="o">:=</span> <span class="nx">rate</span><span class="p">.</span><span class="nf">NewLimiter</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">l</span><span class="p">.</span><span class="nf">Wait</span><span class="p">(</span><span class="nx">ctx</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="nb">println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">l</span><span class="p">.</span><span class="nf">Allow</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nb">println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// 許可されなかったら少し待つ
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nb">println</span><span class="p">(</span><span class="s">&#34;not allowed&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="allow">
-    <a href="#allow" class="anchor">
+<ul>
+<li>データを保存する円盤</li>
+<li>プラッタは複数枚搭載</li>
+<li>プラッタの片面または両面に情報を保持</li>
+</ul>
+<h2 id="ヘッド">
+    <a href="#%e3%83%98%e3%83%83%e3%83%89" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    Allow
+    ヘッド
 </h2>
-<p>即時実行可能かを返します。
-内部実装としては引数を固定化して<code>AllowN</code>を呼び出しています。
-呼び出されている<code>AllowN</code>は引数を固定化して<code>reserveN</code>を呼び出し戻り値の構造体<code>Reservation</code>のbool型のフィールド<code>ok</code>の値を返します。
-即時実行可能でなければスッと諦めたいときや、別の処理に移ってそちらを終えてからリトライしたい時などに使えそうでしょうか。</p>
-<h2 id="wait">
-    <a href="#wait" class="anchor">
+<ul>
+<li>プラッタ上の情報を読み書きする部品</li>
+<li>ヘッドはプラッタの数だけ搭載(両面に情報が保持される場合各面にヘッドが搭載される)</li>
+</ul>
+<h2 id="トラック">
+    <a href="#%e3%83%88%e3%83%a9%e3%83%83%e3%82%af" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    Wait
+    トラック
 </h2>
-<p>処理の回数に応じた待機時間だけブロックします。
-内部実装としてはは引数を固定化して<code>WaitN</code>を呼び出しています。
-<code>context.Context</code>の<code>Deadline</code>を考慮した待機時間を計算し、キャンセル時には内部で検知しエラーを返してくれます。
-また、<code>context.Context</code>がキャンセルされれば待機時間の途中であってもエラーを返します。
-基本は<code>Wait</code>を使うことが多そうでしょうか。</p>
-<h2 id="reserve">
-    <a href="#reserve" class="anchor">
+<ul>
+<li>プラッタを同じ円心上に分けた領域</li>
+<li>プラッタの各面に存在</li>
+</ul>
+<h2 id="セクタ">
+    <a href="#%e3%82%bb%e3%82%af%e3%82%bf" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    Reserve
+    セクタ
 </h2>
-<p>処理の実行可能フラグ、待機時間などを持った構造体を返します。
-内部実装としてはは引数を固定化して<code>ReserveN</code>を呼び出しています。
-現時点の制御情報をもとに自前で自由にロジックを組みたい時に使えそうでしょうか。</p>
-<h2 id="reserven">
-    <a href="#reserven" class="anchor">
+<ul>
+<li>トラックを放射上に分けた領域</li>
+<li>最小の記録単位</li>
+</ul>
+<h2 id="シリンダ">
+    <a href="#%e3%82%b7%e3%83%aa%e3%83%b3%e3%83%80" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    reserveN
+    シリンダ
 </h2>
-<p>プライベートメソッドなので利用側から呼び出すことはないですが、大事な処理なので備忘も兼ねて超簡単にまとめておきます。</p>
-<p><code>reserveN</code>は時刻、処理を実行したい回数、許容可能な待機時間を引数に受け取り構造体Reservationを返します。
-メソッドのコメントには<code>reserveN</code>は<code>AllowN</code>、<code>WaitN</code>、<code>ReservationN</code>でヘルパーメソッドであると記載されており、<code>AllowN</code>、<code>WaitN</code>においては<code>reserveN</code>が返す構造体<code>Reservation</code>の値をもとロジックが組まれています。
-そのことから構造体<code>Reservation</code>を生成しているこのメソッドの実装がかなり重要であることがわかります。</p>
-<h2 id="結び">
-    <a href="#%e7%b5%90%e3%81%b3" class="anchor">
+<ul>
+<li>複数のプラッタにおいて同じ位置に存在するトラックの集まり</li>
+<li>同じシリンダ上にあるトラックへの読み書きはヘッドを動かす必要なし</li>
+</ul>
+<h2 id="シーク">
+    <a href="#%e3%82%b7%e3%83%bc%e3%82%af" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    結び
+    シーク
 </h2>
-<p>rateパッケージは400行程度のソースコードで構成されています。
-久しぶりにコードリーディングもしたかったので、全部読んで詳細にまとめることを試みましたが挫折しました。(正確には大方読んだけどまとめて記事ににおこす気力が湧かなかった)</p>
+<ul>
+<li>読み書き対象のトラックへのヘッドの移動</li>
+<li>アームを動かすことで実現</li>
+</ul>
+<h2 id="サーチ">
+    <a href="#%e3%82%b5%e3%83%bc%e3%83%81" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    サーチ
+</h2>
+<ul>
+<li>読み書き対象のセクタへのヘッドの移動</li>
+<li>ディスクの回転で実現</li>
+</ul>
+<h2 id="読み書きにかかる時間">
+    <a href="#%e8%aa%ad%e3%81%bf%e6%9b%b8%e3%81%8d%e3%81%ab%e3%81%8b%e3%81%8b%e3%82%8b%e6%99%82%e9%96%93" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    読み書きにかかる時間
+</h2>
+<ul>
+<li>トラックへの移動時間(シークの時間) + セクタへの移動時間(サーチの時間) + データ転送の時間</li>
+</ul>
+<h2 id="参考記事">
+    <a href="#%e5%8f%82%e8%80%83%e8%a8%98%e4%ba%8b" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    参考記事
+</h2>
+<ul>
+<li><a href="https://gigazine.net/news/20151104-how-hard-drive-work/">https://gigazine.net/news/20151104-how-hard-drive-work/</a></li>
+<li><a href="https://elite-lane.com/hdd/">https://elite-lane.com/hdd/</a></li>
+<li><a href="https://gigazine.net/news/20151104-how-hard-drive-work/">https://gigazine.net/news/20151104-how-hard-drive-work/</a></li>
+<li><a href="http://park12.wakwak.com/~eslab/pcmemo/hdisk/index.html">http://park12.wakwak.com/~eslab/pcmemo/hdisk/index.html</a></li>
+<li><a href="https://www.seplus.jp/dokushuzemi/ec/fe/fenavi/easy_calc/disc/">https://www.seplus.jp/dokushuzemi/ec/fe/fenavi/easy_calc/disc/</a></li>
+</ul>
 
     </div>
 </div>
@@ -296,17 +296,12 @@ if (!doNotTrack) {
     
     <nav class="flex container suggested">
         
-        <a rel="prev" href="/post/go-linq%E8%A7%A6%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/" title="Previous post (older)">
+        <a rel="prev" href="/post/gorate%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/" title="Previous post (older)">
             <span>Previous</span>
-            【Go】go-linq触ってみた
+            【Go】rateパッケージの使い方
             </a>
         
         
-        
-        <a rel="next" href="/post/hdd%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/" title="Next post (newer)">
-            <span>Next</span>
-            HDDの基礎知識
-            </a> 
         
     </nav>
     

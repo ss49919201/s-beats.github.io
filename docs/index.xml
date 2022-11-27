@@ -5,7 +5,148 @@
     <description>Recent content on beats blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 20 Nov 2022 18:19:17 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 13:46:33 +0900</lastBuildDate><atom:link href="https://s-beats.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>HDDの基礎知識</title>
+    <link>https://s-beats.github.io/post/hdd%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/</link>
+    <pubDate>Sun, 27 Nov 2022 13:46:33 +0900</pubDate>
+    
+    <guid>https://s-beats.github.io/post/hdd%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/</guid>
+    <description>
+        &lt;p&gt;HDDの基本的な用語や構成を全然覚えられず、都度検索しているので備忘録としてまとめます。&lt;/p&gt;
+&lt;h2 id=&#34;プラッタ&#34;&gt;
+    &lt;a href=&#34;#%e3%83%97%e3%83%a9%e3%83%83%e3%82%bf&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    プラッタ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;データを保存する円盤&lt;/li&gt;
+&lt;li&gt;プラッタは複数枚搭載&lt;/li&gt;
+&lt;li&gt;プラッタの片面または両面に情報を保持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ヘッド&#34;&gt;
+    &lt;a href=&#34;#%e3%83%98%e3%83%83%e3%83%89&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    ヘッド
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;プラッタ上の情報を読み書きする部品&lt;/li&gt;
+&lt;li&gt;ヘッドはプラッタの数だけ搭載(両面に情報が保持される場合各面にヘッドが搭載される)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;トラック&#34;&gt;
+    &lt;a href=&#34;#%e3%83%88%e3%83%a9%e3%83%83%e3%82%af&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    トラック
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;プラッタを同じ円心上に分けた領域&lt;/li&gt;
+&lt;li&gt;プラッタの各面に存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;セクタ&#34;&gt;
+    &lt;a href=&#34;#%e3%82%bb%e3%82%af%e3%82%bf&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    セクタ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;トラックを放射上に分けた領域&lt;/li&gt;
+&lt;li&gt;最小の記録単位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;シリンダ&#34;&gt;
+    &lt;a href=&#34;#%e3%82%b7%e3%83%aa%e3%83%b3%e3%83%80&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    シリンダ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;複数のプラッタにおいて同じ位置に存在するトラックの集まり&lt;/li&gt;
+&lt;li&gt;同じシリンダ上にあるトラックへの読み書きはヘッドを動かす必要なし&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;シーク&#34;&gt;
+    &lt;a href=&#34;#%e3%82%b7%e3%83%bc%e3%82%af&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    シーク
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;読み書き対象のトラックへのヘッドの移動&lt;/li&gt;
+&lt;li&gt;アームを動かすことで実現&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;サーチ&#34;&gt;
+    &lt;a href=&#34;#%e3%82%b5%e3%83%bc%e3%83%81&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    サーチ
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;読み書き対象のセクタへのヘッドの移動&lt;/li&gt;
+&lt;li&gt;ディスクの回転で実現&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;読み書きにかかる時間&#34;&gt;
+    &lt;a href=&#34;#%e8%aa%ad%e3%81%bf%e6%9b%b8%e3%81%8d%e3%81%ab%e3%81%8b%e3%81%8b%e3%82%8b%e6%99%82%e9%96%93&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    読み書きにかかる時間
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;トラックへの移動時間(シークの時間) + セクタへの移動時間(サーチの時間) + データ転送の時間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考記事&#34;&gt;
+    &lt;a href=&#34;#%e5%8f%82%e8%80%83%e8%a8%98%e4%ba%8b&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    参考記事
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gigazine.net/news/20151104-how-hard-drive-work/&#34;&gt;https://gigazine.net/news/20151104-how-hard-drive-work/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elite-lane.com/hdd/&#34;&gt;https://elite-lane.com/hdd/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gigazine.net/news/20151104-how-hard-drive-work/&#34;&gt;https://gigazine.net/news/20151104-how-hard-drive-work/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://park12.wakwak.com/~eslab/pcmemo/hdisk/index.html&#34;&gt;http://park12.wakwak.com/~eslab/pcmemo/hdisk/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.seplus.jp/dokushuzemi/ec/fe/fenavi/easy_calc/disc/&#34;&gt;https://www.seplus.jp/dokushuzemi/ec/fe/fenavi/easy_calc/disc/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>【Go】rateパッケージの使い方</title>
     <link>https://s-beats.github.io/post/gorate%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/</link>
